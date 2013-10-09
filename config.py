@@ -5,7 +5,7 @@ import getpass
 data = {
 
         "blog_title":"Frankie's Blog",
-        "blog_description":"A blog about me",
+        "blog_description":"",
         "admin":"frankie",
         "name":"Frankie",
         "db":"ambel.db",

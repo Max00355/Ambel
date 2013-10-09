@@ -1,5 +1,10 @@
-<form method="post">
-    <input type="text" name="username">
-    <input type="password" name="password"/>
-    <input type="submit"/>
-</form>
+{% extends "header.html" %}
+{% block body %}
+    <div class="loginForm">
+        <form method="post">
+            <input type="text" id="username" name="username">
+            <input type="password" id="password" name="password"/>
+            <input type="submit" id="submit" value="Login"/>
+        </form>
+    </div>
+{% endblock %}

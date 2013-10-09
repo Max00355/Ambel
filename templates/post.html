@@ -1,5 +1,11 @@
-<form method="post">
-    <input type="text" name="title"><br/>
-    <textarea name="post" cols="50" rows="25"/></textarea>
-        <input type="submit"/>
+{% extends "header.html" %}
+
+{% block body %}
+   <div class="postForm">
+    <form method="post">
+        <input type="text" name="title" id="title">
+        <textarea name="post" id="post"/></textarea>
+        <input type="submit" value="Submit" id="submit"/>
     </form>
+    </div>
+{% endblock %}

@@ -37,14 +37,14 @@ def post():
                 return redirect("/post/")
             else:
                 return "Login Failed"
-        return render_template("login.html")
+        return render_template("login.html",  config=config.data)
     else:
         if request.method == "POST":
             title = request.form['title']
             post = Markup(request.form['post'].replace("\n", "<br/>").replace("\r", "&nbsp;"))
             db.insert("posts", {"title":title, "post":post, "by":config.data['name'], "date":"{0}/{1}/{2}".format(datetime.datetime.now().timetuple()[1], datetime.datetime.now().timetuple()[2], datetime.datetime.now().timetuple()[0])})
             return redirect("/")
-        return render_template("post.html")
+        return render_template("post.html",  config=config.data)
 def check_login():
     if "login" in session:
         return True
