@@ -1,7 +1,7 @@
 How To
 ======
 
-1. Open confif.py and edit the file config to your liking.
+1. Open config.py and edit the file config to your liking.
 2. Run config.py
 3. Enter any admin password that you would like
 4. Run __init__.py
