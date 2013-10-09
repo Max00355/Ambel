@@ -1,0 +1,14 @@
+<html>
+    <head><h1>{{ config['blog_title'] }}</h1><h5>{{ config["blog_description"] }}</h5></head><title>{{ config['blog_title'] }}</title>
+    <body>
+        {% for x in out %}
+        <h2>{{ x['title']}}</h2>
+        <h5>By: {{ x['by'] }}</h5>
+        <div class="post">
+            {{ x["post"] }}
+        </div>
+        
+        {% endfor %}
+        <button onclick="window.location='/?page={{ page }}';" class="loadmore">Load More</button>
+    </body>
+</html>
