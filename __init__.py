@@ -56,5 +56,9 @@ def check_login():
     else:
         return False
 
+
 if __name__ == "__main__":
-    app.run(debug=True, port=8080)
+    if config.debug:
+        app.run(debug=True, port=8080)
+    else:
+        app.run(host="0.0.0.0", port=80)

@@ -9,6 +9,7 @@ data = {
         "admin":"frankie",
         "name":"Frankie",
         "db":"ambel.db",
+        "debug":True,
 
 }
 
