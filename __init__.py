@@ -24,6 +24,11 @@ def index():
     else:
         out = posts[:_page]
     page = int(page) + 1
+    o = []
+    for x in out:
+        x['post'] = Markup(x['post'])
+        o.append(x)
+    out = o
     return render_template("index.html", out=out, config=config.data, page=page)
 
 @app.route("/post/", methods=['GET', 'POST'])

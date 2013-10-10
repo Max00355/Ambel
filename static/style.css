@@ -1,0 +1,105 @@
+html {
+
+    font-family: Baskerville;
+    color: #404040 ;
+
+}
+
+.header #title {
+
+
+    font-weight: bold;
+    font-size: 45px;
+    padding: 45px;
+
+}
+
+.posts {
+
+    width: 45%;
+    position: relative;
+    left: 35%;
+}
+
+.posts #title {
+    
+    font-weight: bold;
+    font-size: 35px;
+
+}
+
+.posts #post {
+
+    position: relative;
+    left: -25%;
+
+}
+
+.loadMore {
+
+    background:None;
+    border:None;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+
+
+}
+
+.loadmore:hover {
+
+    color: blue;
+
+}
+
+.loginForm {
+
+    position:relative;
+    left: 40%;
+    top :15%;
+    
+
+}
+
+
+.loginForm input {
+
+    margin: 5px;
+    padding: 5px;
+    positioN: relative;
+    left: -3%;
+
+}
+
+.loginForm button {
+
+    width: 5%;
+
+}
+
+
+.postForm {
+
+    position:relative;
+    left: 35%;
+    top:10%;
+    margin: 5px;
+
+}
+
+.postform input {
+
+    width: 25%;
+    position: relative;
+    left: -5%;
+
+}
+
+.postForm textarea {
+
+    position: relative;
+    left:-15%;
+    width: 50%;
+    height: 55%;
+    
+}
