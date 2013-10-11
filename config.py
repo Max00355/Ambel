@@ -4,12 +4,12 @@ import getpass
 
 data = {
 
-        "blog_title":"Frankie's Blog",
+        "blog_title":"Inqre Dev Blog",
         "blog_description":"",
-        "admin":"frankie",
-        "name":"Frankie",
-        "db":"ambel.db",
+        "admin":"inqre",
+        "name":"Inqre Team",
         "debug":True,
+        "db":"ambel.db",
 
 }
 

@@ -1,8 +1,10 @@
 {% extends "header.html" %}
 
 {% block body %}
+<div class="header">
+	<h1 id="title">{{ config['blog_title'] }}</h1>
+</div>
 <div class="postForm">
-    <h1>Post</h1>
     <form method="post">
         <input type="text" name="title" id="title" placeholder="Title"><br/>
         <textarea name="post" id="post" placeholder="Post..."/></textarea><br/>
