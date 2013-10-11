@@ -1,24 +1,49 @@
-html {
-
-    font-family: Baskerville;
-    color: #404040 ;
-
+body {
+	font-family: "Helvetica Neue", sans-serif;
+	margin: 0;
+	background: #f9f9f9;
 }
 
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+form {
+	margin: 0;
+}
+
+.header {
+	background: #1d1d1d;
+	position: relative;
+	z-index: 9999;
+}
 .header #title {
-
-
-    font-weight: bold;
-    font-size: 45px;
-    padding: 45px;
-
+	font-weight: 200;
+	font-size: 24px;
+	padding: 30px 0;
+	display: block;
+	text-align: center;
+	color: rgba(255,255,255,.7);
+	margin: 0;
+}
+.header #title a {
+	text-decoration: none;
+	color: rgba(255,255,255,.7);
+}
+.header #title a:hover {
+	color: #fff;
+	box-shadow: 0 2px rgba(255,255,255,.1);
+}
+.header #title span {
+	color: white;
+	font-weight: normal;
 }
 
 .posts {
-
-    width: 45%;
-    position: relative;
-    left: 35%;
+	width: 960px;
+	margin: 0 auto;
 }
 
 .posts #title {
@@ -31,7 +56,6 @@ html {
 .posts #post {
 
     position: relative;
-    left: -25%;
 
 }
 
@@ -55,8 +79,6 @@ html {
 .loginForm {
 
     position:relative;
-    left: 40%;
-    top :15%;
     
 
 }
@@ -66,40 +88,103 @@ html {
 
     margin: 5px;
     padding: 5px;
-    positioN: relative;
-    left: -3%;
+    position: relative;
 
 }
 
 .loginForm button {
-
-    width: 5%;
-
+	
 }
 
 
 .postForm {
-
-    position:relative;
-    left: 35%;
-    top:10%;
-    margin: 5px;
-
+    margin: 0;
+}
+input:focus, textarea:focus {
+	outline: none;
+	color: black;
 }
 
-.postform input {
-
-    width: 25%;
-    position: relative;
-    left: -5%;
-
+.postform .inputContainer {
+	margin: 0;
+	padding: 30px;
+	border: none;
+	background: white;
+	width: 100%;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	font-weight: 200;
+}
+.inputContainer input {
+	background: none;
+	width: 960px;
+	border: none;
+	font-size: 32px;
+	margin: 0;
+	padding: 0;
+	font-family: "Helvetica Neue", sans-serif;
 }
 
-.postForm textarea {
-
-    position: relative;
-    left:-15%;
-    width: 50%;
-    height: 55%;
-    
+.postForm .textareaContainer {
+	background: #fdfdfd;
+	width: 100%;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	margin: 0;
+	padding: 30px 30px 128px;
+	font-size: 32px;
+	border: none;
+	height: 100%;
+}
+.textareaContainer textarea {
+	background: none;
+	width: 960px;
+	border: none;
+	font-size: 32px;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: "Helvetica Neue", sans-serif;
+	resize: none;
+}
+.postBlock {
+	height: 100%;
+	padding-bottom: 100px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	padding-top: 89px;
+}
+.submitContainer {
+	position: absolute;
+	width: 100%;
+	height: 100px;
+	background: #00a3de;
+	bottom:0;
+}
+.submitContainer button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	width: 490px;
+	text-align: center;
+	border-radius:2px;
+	background: white;
+	border: none;
+	color: #00a3de;
+	font-weight: bold;
+	font-size: 12px;
+	height: 50px;
+	margin: 25px 0;
+	opacity: .7;
+	font-family: "Helvetica Neue", sans-serif;
+}
+.submitContainer button:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+.submitContainer button:active {
+	background: rgba(0,0,0,.4);
 }

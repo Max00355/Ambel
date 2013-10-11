@@ -2,13 +2,27 @@
 
 {% block body %}
 <div class="header">
-	<h1 id="title">{{ config['blog_title'] }}</h1>
+	<h1 id="title"><a href="/">{{ config['blog_title'] }}</a> <span>/post</span></h1>
 </div>
 <div class="postForm">
     <form method="post">
-        <input type="text" name="title" id="title" placeholder="Title"><br/>
-        <textarea name="post" id="post" placeholder="Post..."/></textarea><br/>
-        <button type="submit" value="Submit" id="submit">Submit</button>
+    	<div class="postBlock">
+	    	<div class="inputContainer">
+		    	<center>
+		        	<input autocomplete="off" type="text" name="title" id="title" placeholder="Title">
+		    	</center>
+	    	</div>
+	    	<div class="textareaContainer">
+	    		<center>
+	        		<textarea autocomplete="off" name="post" id="post" placeholder="Start writing nao"/></textarea>
+	        	</center>
+	        </div>
+        </div>
+        <div class="submitContainer">
+        	<center>
+        		<button type="submit" value="Submit" id="submit">Publish</button>
+        	</center>
+        </div>
     </form>
-    </div>
+</div>
 {% endblock %}

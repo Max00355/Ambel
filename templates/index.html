@@ -1,5 +1,8 @@
 {% extends "header.html" %}
 {% block body %}
+<div class="header">
+	<h1 id="title"><a href="/">{{ config['blog_title'] }}</a></h1>
+</div>
     <div class="posts">
         {% for x in out %}
         <span id="title"><br/><br/>{{ x['title']}}</span><br/>
@@ -9,5 +12,5 @@
             </span>    
     {% endfor %}
 </div>
-    <button onclick="window.location='/?page={{ page }}';" class="loadmore">Load More</button>
+    <!--<button onclick="window.location='/?page={{ page }}';" class="loadmore">Load More</button>-->
 {% endblock %}
