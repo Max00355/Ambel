@@ -8,7 +8,7 @@ data = {
         "blog_description":"",
         "admin":"inqre",
         "name":"Inqre Team",
-        "debug":False,
+        "debug":True,
         "db":"ambel.db",
 
 }

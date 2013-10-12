@@ -10,6 +10,15 @@ db = landerdb.Connect(config.data['db'])
 app = Flask(__name__)
 app.secret_key = os.urandom(1024)
 
+@app.route("/<post>", methods=['GET', 'POST'])
+def post_page(post):
+    data = db.find("posts", {"title":post})
+    b = []
+    for x in data:
+        x['post'] = Markup(x['post'])
+        b.append(x)
+    data = b
+    return render_template("singlepost.html", out=data, config=config.data)
 @app.route("/")
 def index():
     page = request.values.get("page")
@@ -47,6 +56,8 @@ def post():
         if request.method == "POST":
             title = request.form['title']
             post = Markup(request.form['post'].replace("\n", "<br/>").replace("\r", "&nbsp;"))
+            if title == "" or post == "":
+                return "You must fill out all the forms."
             db.insert("posts", {"title":title, "post":post, "by":config.data['name'], "date":"{0}/{1}/{2}".format(datetime.datetime.now().timetuple()[1], datetime.datetime.now().timetuple()[2], datetime.datetime.now().timetuple()[0])})
             return redirect("/")
         return render_template("post.html",  config=config.data)
@@ -59,6 +70,6 @@ def check_login():
 
 if __name__ == "__main__":
     if config.data['debug']:
-        app.run(debug=True, port=8080)
+        app.run(debug=True,host="0.0.0.0", port=8081)
     else:
-        app.run(host="0.0.0.0", port=8000)
+        app.run(host="0.0.0.0", port=80)

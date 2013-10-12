@@ -5,12 +5,11 @@
 </div>
     <div class="posts">
         {% for x in out %}
-        <span id="title"><br/><br/><a href="/{{x['title'] }}">{{ x['title']}}</a></span><br/>
+        <span id="title"><br/><br/>{{ x['title']}}</span><br/>
     <span id="by">By: {{ x['by'] }} @ {{ x['date'] }}</span><br/>
             <span id="post"><br/>
                 {{ x["post"] }}
             </span>    
     {% endfor %}
 </div>
-    <!--<button onclick="window.location='/?page={{ page }}';" class="loadmore">Load More</button>-->
 {% endblock %}
